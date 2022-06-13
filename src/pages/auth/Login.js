@@ -8,7 +8,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -104,9 +104,13 @@ export default function Login() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
+  const style = {
+    backgroundColor: "#eeeeee"
+  }
+
   return (
     <ThemeProvider theme={theme}>
-      <Container component='main' maxWidth='xs'>
+      <Container component='main' maxWidth='xs' style={style}>
         <CssBaseline />
         <Box
           sx={{
@@ -116,11 +120,12 @@ export default function Login() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: 1, bgcolor: 'green' }}>
+            <SportsCricketIcon  />
           </Avatar>
           <Typography component='h1' variant='h5'>
-            Sign in
+           
+                LOGIN
           </Typography>
           <Box sx={{ mt: 1 }}>
             {errorMessage && <Alert severity='error'>{errorMessage}</Alert>}
@@ -130,8 +135,9 @@ export default function Login() {
                   margin='normal'
                   required
                   fullWidth
+
                   id='email'
-                  label='Email Address'
+                  label ='Email Address'
                   name='email'
                   autoComplete='email'
                   autoFocus
@@ -159,6 +165,7 @@ export default function Login() {
                       {...getFieldProps('remember')}
                       checked={values.remember}
                       color='primary'
+                      
                     />
                   }
                   label='Remember me'
@@ -167,22 +174,24 @@ export default function Login() {
                 <Button
                   type='submit'
                   fullWidth
+                  
                   variant='contained'
                   sx={{ mt: 3, mb: 2 }}
                   disabled={isLoading}
                 >
-                  Sign In
+                 
+                  Login
                 </Button>
               </Form>
             </FormikProvider>
             <Grid container>
               <Grid item xs>
                 <Link href='#' variant='body2'>
-                  Forgot password?
+                  Forgot password
                 </Link>
               </Grid>
               <Grid item>
-                <Link href='/techstep/signup' variant='body2'>
+                <Link href='/examportal/signup' variant='body2'>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

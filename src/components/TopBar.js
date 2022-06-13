@@ -15,7 +15,7 @@ export default function TopBar() {
           <IconButton
             size='large'
             edge='start'
-            color='inherit'
+            color='green'
             aria-label='menu'
             sx={{ mr: 2 }}
           >
@@ -25,7 +25,7 @@ export default function TopBar() {
             News
           </Typography>
           <Button color='inherit'>Login</Button>
-        </Toolbar>
+         </Toolbar>
       </AppBar>
     </Box>
   );
